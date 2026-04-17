@@ -74,7 +74,7 @@ export default function Countdown() {
       </p>
 
         <img
-        src="/corazon.png"
+        src="/anillos.png"
         className="mt-6 w-16 opacity-70"
         />
     </div>

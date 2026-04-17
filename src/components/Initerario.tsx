@@ -23,7 +23,9 @@ const LocationIcon = () => (
 );
 
 export function Itinerary() {
-  const [openMap, setOpenMap] = useState(null);
+  type MapKey = "civil" | "ceremonia" | "fiesta";
+
+  const [openMap, setOpenMap] = useState<MapKey | null>(null);
 
   const maps = {
     civil:

@@ -4,39 +4,20 @@ import { motion } from "framer-motion";
 const EVENT_DATE = new Date("2026-12-01T00:00:00");
 
 function getTimeLeft() {
-    const now = new Date();
-    
-    const total = EVENT_DATE.getTime() - now.getTime(); 
-    let years = EVENT_DATE.getFullYear() - now.getFullYear();
-    let months = EVENT_DATE.getMonth() - now.getMonth();
-    let days = EVENT_DATE.getDate() - now.getDate();
+  const now = new Date();
+  const total = EVENT_DATE.getTime() - now.getTime();
 
-    if (days < 0) {
-        months--;
-        const prevMonthDays = new Date(
-        now.getFullYear(),
-        now.getMonth() + 1,
-        0
-        ).getDate();
-        days += prevMonthDays;
-    }
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((total / (1000 * 60)) % 60);
+  const seconds = Math.floor((total / 1000) % 60);
 
-    if (months < 0) {
-        years--;
-        months += 12;
-    }
-
-    const seconds = Math.floor((total / 1000) % 60);
-    const minutes = Math.floor((total / 1000 / 60) % 60);
-    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-
-    return {
-        months: months + years * 12,
-        days,
-        hours,
-        minutes,
-        seconds,
-    };
+  return {
+    days,
+    hours,
+    minutes,
+    seconds,
+  };
 }
 
 export default function Countdown() {
@@ -52,9 +33,9 @@ export default function Countdown() {
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-white/30 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl 
-                      text-2xl sm:text-3xl md:text-5xl font-serif text-gray-800 shadow-md 
-                      min-w-[65px] sm:min-w-[80px] md:min-w-[100px] text-center">
+    <div className="bg-white/30 backdrop-blur-md px-2 py-2 md:px-3 md:py-2 rounded-xl 
+                    text-xl sm:text-2xl md:text-3xl font-serif text-gray-800 shadow-md 
+                    min-w-[50px] sm:min-w-[60px] md:min-w-[70px] text-center">
         <motion.span
           initial={false}
           animate={{ y: 0 }}
@@ -70,7 +51,7 @@ export default function Countdown() {
 
   return (
     <div
-      className="h-screen w-full bg-cover bg-center flex flex-col items-center justify-center text-center"
+    className="min-h-[60vh] w-full bg-cover bg-center flex flex-col items-center justify-center text-center"
     >
       <h1 className="text-gray-600 tracking-[0.3em] text-sm mb-10">
         {/* Corazón decorativo */}

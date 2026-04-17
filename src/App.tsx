@@ -5,6 +5,8 @@ import { Honeymoon } from "./components/Honeymoon";
 import { Itinerary } from "./components/Initerario";
 import { Information } from "./components/Menu";
 import { Bebes } from "./components/Bebes";
+import { Asistencia } from "./components/Asistencia";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Honeymoon />
       <Information />
       <Bebes />
+      <Asistencia />
+      <Footer />
     </>
   );
 }

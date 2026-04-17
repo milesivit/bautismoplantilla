@@ -1,10 +1,22 @@
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [started, setStarted] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  
+  useEffect(() => {
+    if (!started) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [started]);
 
   const toggleMute = () => {
     if (!audioRef.current) return;
@@ -19,18 +31,31 @@ export default function Hero() {
   };
 
   return (
-    <section
-      className="h-screen w-full bg-cover bg-center flex items-center justify-center relative"
-      style={{
-        backgroundImage: "url('/viryseba.png')",
-      }}
-    >
-      {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-black/60" />
+<section className="h-screen w-full flex items-center justify-center relative overflow-hidden transition-all duration-700">
 
-      {/* Contenido */}
-      <div className="relative text-center text-white px-4">
-        
+      {/* Fondo */}
+      <div
+        className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+        style={{
+          backgroundImage: "url('/viryseba.png')",
+          filter: started ? "blur(0px)" : "blur(8px)",
+          transform: started ? "scale(1)" : "scale(1.05)",
+        }}
+      />
+
+      {/* Overlay */}
+      <div
+        className="absolute inset-0 transition-all duration-700"
+        style={{
+          backgroundColor: started
+            ? "rgba(0,0,0,0.4)"
+            : "rgba(0,0,0,0.7)",
+        }}
+      />
+
+      {/* Contenido (NO borroso) */}
+      <div className="relative z-10 text-center text-white px-4">
+
         {!started ? (
           <button
             onClick={startExperience}
@@ -43,7 +68,6 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
               className="mt-4 mb-2 text-lg md:text-xl"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
@@ -73,6 +97,7 @@ export default function Hero() {
             </motion.p>
           </>
         )}
+
       </div>
 
       {/* Música */}
@@ -80,10 +105,11 @@ export default function Hero() {
 
       <button
         onClick={toggleMute}
-        className="fixed bottom-6 right-6 bg-white/80 backdrop-blur-md p-3 rounded-full shadow-md hover:scale-110 transition"
+        className="fixed bottom-6 right-6 z-50 bg-white/80 backdrop-blur-md p-3 rounded-full shadow-md hover:scale-110 transition"
       >
         {isMuted ? "🔇" : "🔊"}
       </button>
-    </section>
+
+      </section>
   );
 }

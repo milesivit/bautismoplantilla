@@ -14,13 +14,15 @@ export function Information() {
         Información
       </h2>
 
+      {/* linea */}
+      <div className="w-24 h-[1px] bg-black mx-auto mb-12" />
+
       {/* TEXTO */}
       <p
         className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed mb-6"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
-        Valor de la tarjeta<br />
-        Para ayudarnos con la organización, te compartimos el valor por persona
+        Para ayudarnos con la organización, te compartimos el <span className="font-semibold">valor por persona</span>.
       </p>
 
       {/* CARD PRECIO */}

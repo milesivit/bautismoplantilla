@@ -76,7 +76,7 @@ export default function Hero() {
       </div>
 
       {/* Música */}
-      {/* <audio ref={audioRef} src="/cancion.mp3" /> */}
+      <audio ref={audioRef} src="/cancion.mp3" />
 
       <button
         onClick={toggleMute}

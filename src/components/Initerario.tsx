@@ -29,7 +29,7 @@ export function Itinerary() {
 
   const maps = {
     civil:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4430.678683828601!2d-62.88533921953781!3d-33.56144854139987!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cf2c79fbb58f17%3A0xa46b287f54974cfe!2sParroquia%20La%20Anunciaci%C3%B3n%20y%20Santo%20Cristo!5e0!3m2!1sen!2sar",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4430.678683828601!2d-62.88533921953781!3d-33.56144854139987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cf2c79fbb58f17%3A0xa46b287f54974cfe!2sParroquia%20La%20Anunciaci%C3%B3n%20y%20Santo%20Cristo!5e0!3m2!1sen!2sar",
   
     ceremonia:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4430.678683828601!2d-62.88533921953781!3d-33.56144854139987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cf2c79fbb58f17%3A0xa46b287f54974cfe!2sParroquia%20La%20Anunciaci%C3%B3n%20y%20Santo%20Cristo!5e0!3m2!1sen!2sar",

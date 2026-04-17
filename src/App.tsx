@@ -3,6 +3,8 @@ import Countdown from "./components/Countdown";
 import { DressCode } from "./components/DressCode";
 import { Honeymoon } from "./components/Honeymoon";
 import { Itinerary } from "./components/Initerario";
+import { Information } from "./components/Menu";
+import { Bebes } from "./components/Bebes";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <DressCode />
       <Itinerary />
       <Honeymoon />
+      <Information />
+      <Bebes />
     </>
   );
 }

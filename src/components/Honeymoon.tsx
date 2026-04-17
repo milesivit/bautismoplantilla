@@ -16,9 +16,9 @@ export function Honeymoon() {
         className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
-        Nuestro mejor regalo es que estés con nosotros
+        Nuestro mejor regalo es que <span className="font-semibold">estés con nosotros</span>
         <br />
-        en nuestro día, pero si quieres hacernos un obsequio,
+        <span className="font-semibold">en nuestro día</span>, pero si quieres hacernos un obsequio,
         <br />
         puedes contribuir a nuestra luna de miel.
       </p>
@@ -60,7 +60,7 @@ export function Honeymoon() {
               className="text-3xl mb-4"
               style={{ fontFamily: "'Great Vibes', cursive", color: "#111111" }}
             >
-              Ayudanos a viajar por el mundo
+              Ayúdanos a viajar por el mundo
             </h3>
 
             <div className="text-left text-sm space-y-2 text-gray-700">

@@ -36,7 +36,7 @@ export default function Hero() {
             onClick={startExperience}
             className="border border-white px-6 py-3 rounded-full text-lg hover:bg-white hover:text-black transition"
           >
-            ✨ Ver invitación
+            Ver invitación ✨
           </button>
         ) : (
           <>

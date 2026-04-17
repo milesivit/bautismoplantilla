@@ -69,14 +69,14 @@ export default function Hero() {
               className="mt-2 text-md tracking-wide"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              10 de enero 2028
+              10 de enero 2027
             </motion.p>
           </>
         )}
       </div>
 
       {/* Música */}
-      <audio ref={audioRef} src="/cancion.mp3" />
+      {/* <audio ref={audioRef} src="/cancion.mp3" /> */}
 
       <button
         onClick={toggleMute}

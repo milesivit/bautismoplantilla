@@ -4,6 +4,14 @@ import { useRef, useState } from "react";
 export default function Hero() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [started, setStarted] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+
+  const toggleMute = () => {
+    if (!audioRef.current) return;
+  
+    audioRef.current.muted = !audioRef.current.muted;
+    setIsMuted(audioRef.current.muted);
+  };
 
   const startExperience = () => {
     audioRef.current?.play();
@@ -66,7 +74,14 @@ export default function Hero() {
       </div>
 
       {/* Música */}
-      <audio ref={audioRef} src="/music.mp3" />
+      <audio ref={audioRef} src="/cancion.mp3" />
+
+      <button
+        onClick={toggleMute}
+        className="fixed bottom-6 right-6 bg-white/80 backdrop-blur-md p-3 rounded-full shadow-md hover:scale-110 transition"
+      >
+        {isMuted ? "🔇" : "🔊"}
+      </button>
     </section>
   );
 }

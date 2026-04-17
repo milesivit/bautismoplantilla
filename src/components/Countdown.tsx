@@ -52,7 +52,9 @@ export default function Countdown() {
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-white/30 backdrop-blur-md px-6 py-4 rounded-2xl text-3xl md:text-5xl font-serif text-gray-800 shadow-md min-w-[90px] text-center">
+      <div className="bg-white/30 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl 
+                      text-2xl sm:text-3xl md:text-5xl font-serif text-gray-800 shadow-md 
+                      min-w-[65px] sm:min-w-[80px] md:min-w-[100px] text-center">
         <motion.span
           initial={false}
           animate={{ y: 0 }}
@@ -62,7 +64,7 @@ export default function Countdown() {
           {value.toString().padStart(2, "0")}
         </motion.span>
       </div>
-      <span className="text-sm mt-2">{label}</span>
+      <span className="text-xs sm:text-sm mt-2">{label}</span>
     </div>
   );
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const EVENT_DATE = new Date("2026-12-01T00:00:00");
+const EVENT_DATE = new Date("2028-01-10T00:00:00");
 
 function getTimeLeft() {
   const now = new Date();
@@ -51,13 +51,13 @@ export default function Countdown() {
 
   return (
     <div
-    className="min-h-[60vh] w-full bg-cover bg-center flex flex-col items-center justify-center text-center"
+    className="min-h-[60vh] w-full bg-[#E8DCCB] flex flex-col items-center justify-center text-center"
     >
       <h1 className="text-gray-600 tracking-[0.3em] text-sm mb-10">
         {/* Corazón decorativo */}
         <div className="mt-4 text-gray-500 text-1xl">♡</div>
       {/* Título */}
-        FALTAN
+        QUEDAN
       </h1>
 
       {/* Countdown */}
@@ -70,11 +70,11 @@ export default function Countdown() {
 
       {/* Texto abajo */}
       <p className="mt-10 text-gray-600 italic text-sm">
-        Para el día más especial de nuestras vidas
+        Para el capítulo más importante de nuestras vidas
       </p>
 
         <img
-        src="/anillos.png"
+        src="/rings.png"
         className="mt-6 w-16 opacity-70"
         />
     </div>

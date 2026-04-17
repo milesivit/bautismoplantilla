@@ -1,13 +1,15 @@
 import Hero from "./components/Hero";
 import Countdown from "./components/Countdown";
-import StorySection from "./components/StorySection";
+import { DressCode } from "./components/DressCode";
+import { Honeymoon } from "./components/Honeymoon";
 
 function App() {
   return (
     <>
       <Hero />
       <Countdown />
-      <StorySection />
+      <DressCode />
+      <Honeymoon />
     </>
   );
 }

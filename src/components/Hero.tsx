@@ -47,15 +47,17 @@ export default function Hero() {
               className="mt-4 mb-2 text-lg md:text-xl"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Estás invitado a la boda de
+              Con mucha alegría, te invitamos a nuestra boda
             </motion.p>
 
             <motion.h1
               initial={{ opacity: 0, y: -40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="mt-6 md:mt-8 text-5xl md:text-7xl leading-tight"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
+              className=" mt-6 md:mt-8 text-5xl md:text-7xl leading-tight"
+              style={{ fontFamily: "'Great Vibes', cursive",
+                color: "#E8DCCB"
+              }}
             >
               Sebastián y Virginia
             </motion.h1>
@@ -67,7 +69,7 @@ export default function Hero() {
               className="mt-2 text-md tracking-wide"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              1 de diciembre 2026
+              10 de enero 2028
             </motion.p>
           </>
         )}

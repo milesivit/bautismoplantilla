@@ -1,8 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
 
 export function Information() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  
+    // cleanup por si el componente se desmonta
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
 
   return (
     <section className="py-20 text-center bg-[#E8DCCB] relative px-6">
@@ -100,7 +114,7 @@ export function Information() {
           onClick={() => setOpen(false)}
         >
           <div
-            className="bg-[#E8DCCB] rounded-2xl p-6 w-[92%] max-w-md shadow-xl relative max-h-[85vh] overflow-y-auto"
+            className="bg-white rounded-2xl p-6 w-[92%] max-w-md shadow-xl relative max-h-[85vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
 

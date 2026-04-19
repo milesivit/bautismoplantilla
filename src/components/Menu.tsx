@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export function Information() {
   const [open, setOpen] = useState(false);
@@ -24,6 +25,13 @@ export function Information() {
       >
         Para ayudarnos con la organización, te compartimos el <span className="font-semibold">valor por persona</span>.
       </p>
+
+      <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
 
       {/* CARD PRECIO */}
       <div className="bg-[#F4EFE7] rounded-2xl p-6 shadow-md border border-[#D6C4AE] text-center max-w-sm mx-auto mb-6 hover:scale-[1.02] transition">
@@ -68,6 +76,7 @@ export function Information() {
         </div>
 
       </div>
+      </motion.div>
 
       {/* BOTÓN */}
       <button

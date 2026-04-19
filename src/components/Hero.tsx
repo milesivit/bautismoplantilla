@@ -37,7 +37,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-700"
         style={{
-          backgroundImage: "url('/viryseba.png')",
+          backgroundImage: "url('/couple.jpeg')",
           filter: started ? "blur(0px)" : "blur(8px)",
           transform: started ? "scale(1)" : "scale(1.05)",
         }}
@@ -83,7 +83,7 @@ export default function Hero() {
                 color: "#E8DCCB"
               }}
             >
-              Sebastián y Virginia
+              Marcos y Valentina
             </motion.h1>
 
             <motion.p

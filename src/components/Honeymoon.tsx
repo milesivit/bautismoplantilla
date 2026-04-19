@@ -65,10 +65,13 @@ export function Honeymoon() {
 
             <div className="text-left text-sm space-y-2 text-gray-700">
               <p>
-                <span className="font-semibold">Alias:</span> virgimalatini
+                <span className="font-semibold">Alias:</span> XXXXXXXXX
               </p>
               <p>
-                <span className="font-semibold">Titular:</span> Virginia Malatini
+                <span className="font-semibold">CBU:</span> XXXXXXXXX
+              </p>
+              <p>
+                <span className="font-semibold">Titular:</span> XXXXXXX XXXXXXX
               </p>
             </div>
           <img src="/honeymoon.png" className="mt-6 mb-4 w-16 mx-auto opacity-80" />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const LocationIcon = () => (
   <svg
@@ -60,6 +61,12 @@ export function Itinerary() {
 
         {/* CIVIL */}
         <div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <img src="/letter.png" className="mt-6 mb-4 w-16 mx-auto opacity-80" />
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">CIVIL</p>
           <p className="text-2xl text-gray-800">12:30 HS</p>
@@ -73,10 +80,17 @@ export function Itinerary() {
               Cómo llegar
             </span>
           </button>
+        </motion.div>
         </div>
 
         {/* CEREMONIA */}
         <div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <img src="/church.png" className="mt-6 mb-4 w-16 mx-auto opacity-80" />
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">CEREMONIA</p>
           <p className="text-2xl text-gray-800">20:30 HS</p>
@@ -90,10 +104,17 @@ export function Itinerary() {
               Cómo llegar
             </span>
           </button>
+        </motion.div>
         </div>
 
         {/* FIESTA */}
         <div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <img src="/champagne.png" className="mt-6 mb-4 w-16 mx-auto opacity-80" />
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">FIESTA</p>
           <p className="text-2xl text-gray-800">21:00 HS</p>
@@ -107,6 +128,7 @@ export function Itinerary() {
               Cómo llegar
             </span>
           </button>
+          </motion.div>
         </div>
       </div>
 

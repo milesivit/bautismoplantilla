@@ -184,13 +184,7 @@ export function Information() {
       >
         Ver menú completo
       </button>
-
-      {/* ICONO */}
-      <img
-        className="mt-6 mb-4 w-16 mx-auto opacity-80"
-        src="/dinner.png"
-      />
-
+      
       {/* MODAL */}
       {open && (
         <div

@@ -25,7 +25,9 @@ export function Asistencia() {
         className="text-sm text-white max-w-md mx-auto leading-relaxed"
         style={{ fontFamily: "'Roboto Flex', sans-serif" }}
       >
-        Si fuiste invitado/a con acompañante, <span className="text-red-400 font-semibold">completá un formulario por persona</span>.
+        Si fuiste invitado/a con acompañante, 
+        <br />
+        <span className="text-red-400 font-semibold">completá un formulario por persona</span>.
       </p>
       {/* BOTÓN WHATSAPP */}
       

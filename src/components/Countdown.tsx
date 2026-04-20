@@ -1,82 +1,79 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
-const EVENT_DATE = new Date("2027-01-10T00:00:00");
+export function Countdown() {
+  const weddingDate = new Date("2027-01-10T00:00:00");
 
-function getTimeLeft() {
-  const now = new Date();
-  const total = EVENT_DATE.getTime() - now.getTime();
+  const calculateTimeLeft = () => {
+    const difference = +weddingDate - +new Date();
 
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((total / (1000 * 60)) % 60);
-  const seconds = Math.floor((total / 1000) % 60);
+    if (difference <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
 
-  return {
-    days,
-    hours,
-    minutes,
-    seconds,
+    return {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / 1000 / 60) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
+    };
   };
-}
 
-export default function Countdown() {
-  const [time, setTime] = useState(getTimeLeft());
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(getTimeLeft());
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, []);
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-    <div className="bg-white/30 backdrop-blur-md px-2 py-2 md:px-3 md:py-2 rounded-xl 
-                    text-xl sm:text-2xl md:text-3xl font-serif text-gray-800 shadow-md 
-                    min-w-[50px] sm:min-w-[60px] md:min-w-[70px] text-center">
-        <motion.span
-          initial={false}
-          animate={{ y: 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          className="block"
-        >
-          {value.toString().padStart(2, "0")}
-        </motion.span>
-      </div>
-      <span className="text-xs sm:text-sm mt-2">{label}</span>
+      <span
+        className="text-4xl md:text-6xl font-light tabular-nums"
+        style={{ color: "#1b4568" }}
+      >
+        {String(value).padStart(2, "0")}
+      </span>
+
+      <span
+        className="text-xs md:text-sm tracking-[0.2em] mt-2"
+        style={{ color: "#1b4568" }}
+      >
+        {label}
+      </span>
     </div>
   );
 
   return (
-    <div
-    className="min-h-[60vh] w-full bg-[#E8DCCB] flex flex-col items-center justify-center text-center"
-    >
-      <h1 className="text-gray-600 tracking-[0.3em] text-sm mb-10">
-        {/* Corazón decorativo */}
-        <div className="mt-4 text-gray-500 text-1xl">♡</div>
-      {/* Título */}
-        QUEDAN
-      </h1>
+    <section className="bg-white py-16 text-center">
 
-      {/* Countdown */}
-      <div className="flex gap-6">
-        <Item value={time.days} label="Días" />
-        <Item value={time.hours} label="Horas" />
-        <Item value={time.minutes} label="Minutos" />
-        <Item value={time.seconds} label="Segundos" />
-      </div>
-
-      {/* Texto abajo */}
-      <p className="mt-10 text-gray-600 italic text-sm">
-        Para el capítulo más importante de nuestras vidas
+      <p
+        className="mt-10 text-lg tracking-wide"
+        style={{ color: "#1b4568" }}
+      >
+        El <span className="text-red-600 font-medium">01 de Enero de 2027</span> en
       </p>
 
-        <img
-        src="/rings.png"
-        className="mt-6 w-16 opacity-70"
-        />
-    </div>
+      <img
+        src="/rings.gif"
+        className="mt-8 w-20 md:w-24 mx-auto opacity-80"
+      />
+
+      <div className="flex justify-center gap-6 md:gap-10">
+        <Item value={timeLeft.days} label="DÍAS" />
+        <Item value={timeLeft.hours} label="HORAS" />
+        <Item value={timeLeft.minutes} label="MIN" />
+        <Item value={timeLeft.seconds} label="SEG" />
+      </div>
+
+      <p
+        className="mt-10 text-lg tracking-wide"
+        style={{ color: "#1b4568" }}
+      >
+        ¡NOS CASAMOS!
+      </p>
+    </section>
   );
 }

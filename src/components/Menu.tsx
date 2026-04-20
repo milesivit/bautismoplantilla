@@ -19,25 +19,25 @@ export function Information() {
   }, [open]);
 
   return (
-    <section className="py-20 text-center bg-[#E8DCCB] relative px-6">
+    <section className="py-20 text-center bg-[#1b4568] relative px-6">
 
       {/* TITULO */}
       <h2
-        className="text-4xl md:text-5xl mb-6"
-        style={{ fontFamily: "'Great Vibes', cursive", color: "#000000" }}
+        className="text-4xl md:text-3xl mb-6"
+        style={{ fontFamily: "'Montserrat', sans-serif", color: "#ffffff" }}
       >
-        Información
+        INFORMACIÓN
       </h2>
 
       {/* linea */}
-      <div className="w-24 h-[1px] bg-black mx-auto mb-12" />
+      <div className="w-24 h-[1px] bg-white mx-auto mb-12" />
 
       {/* TEXTO */}
       <p
-        className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed mb-6"
-        style={{ fontFamily: "'Playfair Display', serif" }}
+        className="text-sm text-white max-w-md mx-auto leading-relaxed mb-6"
+        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
       >
-        Para ayudarnos con la organización, te compartimos el <span className="font-semibold">valor por persona</span>.
+        <span className="font-semibold">VALOR POR PERSONA</span>.
       </p>
 
       <motion.div
@@ -67,7 +67,7 @@ export function Information() {
           Mayores
         </h4>
 
-        <p className="text-xs text-gray-500 mb-4">11+ años</p>
+        <p className="text-xs text-gray-500 mb-4">12+ años</p>
 
         {/* PRECIO ACTUAL */}
         <div className="border-2 border-[#7FA8A1] rounded-xl py-4 mb-3 bg-[#EAF3F1]">
@@ -92,11 +92,95 @@ export function Information() {
       </div>
       </motion.div>
 
+      <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+
+      {/* CARD PRECIO */}
+      <div className="bg-[#F4EFE7] rounded-2xl p-6 shadow-md border border-[#D6C4AE] text-center max-w-sm mx-auto mb-6 hover:scale-[1.02] transition">
+
+        {/* ICONO (IMAGEN) */}
+        <div className="w-20 h-20 mx-auto mb-3 flex items-center justify-center rounded-full bg-[#ffffff]">
+        <img
+          src="/children.gif"
+          alt="personas"
+          className="w-12 h-12 object-contain"
+        />
+        </div>
+
+        {/* TITULO */}
+        <h4
+          className="text-2xl mb-1"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          Menores
+        </h4>
+
+        <p className="text-xs text-gray-500 mb-4">6 - 11 años</p>
+
+        {/* PRECIO ACTUAL */}
+        <div className="border-2 border-[#7FA8A1] rounded-xl py-4 mb-3 bg-[#EAF3F1]">
+          <p className="text-xs text-[#7FA8A1] mb-1">
+            Precio único
+          </p>
+          <p className="text-2xl text-[#2F6F68] font-semibold">
+            $29.000
+          </p>
+        </div>
+
+      </div>
+      </motion.div>
+
+      <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+
+      {/* CARD PRECIO */}
+      <div className="bg-[#F4EFE7] rounded-2xl p-6 shadow-md border border-[#D6C4AE] text-center max-w-sm mx-auto mb-6 hover:scale-[1.02] transition">
+
+        {/* ICONO (IMAGEN) */}
+        <div className="w-20 h-20 mx-auto mb-3 flex items-center justify-center rounded-full bg-[#ffffff]">
+        <img
+          src="/baby.gif"
+          alt="personas"
+          className="w-12 h-12 object-contain"
+        />
+        </div>
+
+        {/* TITULO */}
+        <h4
+          className="text-2xl mb-1"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          Minis
+        </h4>
+
+        <p className="text-xs text-gray-500 mb-4">2 - 5 años</p>
+
+        {/* PRECIO ACTUAL */}
+        <div className="border-2 border-[#7FA8A1] rounded-xl py-4 mb-3 bg-[#EAF3F1]">
+          <p className="text-xs text-[#7FA8A1] mb-1">
+            Precio único
+          </p>
+          <p className="text-2xl text-[#2F6F68] font-semibold">
+            $20.000
+          </p>
+        </div>
+
+      </div>
+      </motion.div>
+
       {/* BOTÓN */}
       <button
         onClick={() => setOpen(true)}
-        className="mt-6 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#D6C4AE] bg-[#FAF7F2] text-[#977f5d] shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
-        style={{ fontFamily: "'Playfair Display', serif" }}
+        className="mt-6 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#1b4568] bg-[#ffffff] text-[#1b4568] shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
+        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
       >
         Ver menú completo
       </button>
@@ -128,7 +212,7 @@ export function Information() {
 
             <h3
               className="text-3xl mb-4"
-              style={{ fontFamily: "'Great Vibes', cursive", color: "#111" }}
+              style={{ fontFamily: "'Montserrat', sans-serif", color: "#111" }}
             >
               Bruncher · Catering
             </h3>
@@ -190,7 +274,7 @@ export function Information() {
                 <p>Opciones sin alcohol</p>
               </div>
 
-              <p className="text-xs mt-4 text-gray-600">
+              <p className="text-xs mt-4 text-red-600">
                 Contamos con opciones para celíacos, vegetarianos y veganos. Por favor informalo al confirmar tu asistencia.
               </p>
             </div>

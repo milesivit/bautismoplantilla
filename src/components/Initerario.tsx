@@ -40,19 +40,23 @@ export function Itinerary() {
   };
 
   return (
-    <section className="py-16 bg-[#E8DCCB] text-center px-6">
+    <section className="py-16 bg-white text-center px-6">
 
       {/* TITULO */}
       <h2
-        className="text-4xl md:text-5xl mb-6"
-        style={{ fontFamily: "'Great Vibes', cursive", color: "#000000" }}
+        className="text-4xl md:text-4xl mb-6"
+        style={{ fontFamily: "'Montserrat', sans-serif", color: "#1b4568" }}
       >
-        Itinerario
+        ITINERARIO
       </h2>
 
-      <p className="text-sm md:text-base text-gray-600 mb-12">
-        Te esperamos para celebrar nuestra boda
-      </p>
+      <p
+          className="text-sm md:text-base text-gray-600 mb-12"
+          style={{ fontFamily: "'Roboto Flex', sans-serif" }}
+        >
+          Te esperamos para celebrar nuestra boda
+
+        </p>
 
       {/* linea */}
       <div className="w-24 h-[1px] bg-black mx-auto mb-12" />
@@ -67,15 +71,15 @@ export function Itinerary() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <img src="/letter.png" className="mt-6 mb-4 w-16 mx-auto opacity-80" />
+          <img src="/letter.gif" className="mt-6 mb-4 w-16 mx-auto opacity-80" />
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">CIVIL</p>
           <p className="text-2xl text-gray-800">12:30 HS</p>
 
           <button
             onClick={() => setOpenMap("civil")}
-            className="mt-3 inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
+            className="mt-3 inline-flex items-center gap-2 bg-[#1b4568] px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
           >
-            <span className="text-[#977f5d] flex items-center gap-2 text-sm">
+            <span className="text-[#ffffff] flex items-center gap-2 text-sm">
               <LocationIcon />
               Cómo llegar
             </span>
@@ -91,15 +95,15 @@ export function Itinerary() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <img src="/church.png" className="mt-6 mb-4 w-16 mx-auto opacity-80" />
+          <img src="/church.gif" className="mt-8 mb-6 w-20 mx-auto opacity-80" />
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">CEREMONIA</p>
           <p className="text-2xl text-gray-800">20:30 HS</p>
 
           <button
             onClick={() => setOpenMap("ceremonia")}
-            className="mt-3 inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
+            className="mt-3 inline-flex items-center gap-2 bg-[#1b4568] px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
           >
-            <span className="text-[#977f5d] flex items-center gap-2 text-sm">
+            <span className="text-[#ffffff] flex items-center gap-2 text-sm">
               <LocationIcon />
               Cómo llegar
             </span>
@@ -111,19 +115,19 @@ export function Itinerary() {
         <div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}  
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <img src="/champagne.png" className="mt-6 mb-4 w-16 mx-auto opacity-80" />
+          <img src="/champagne.gif" className="mt-8 mb-6 w-20 mx-auto opacity-80" />
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">FIESTA</p>
           <p className="text-2xl text-gray-800">21:00 HS</p>
 
           <button
             onClick={() => setOpenMap("fiesta")}
-            className="mt-3 inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
+            className="mt-3 inline-flex items-center gap-2 bg-[#1b4568] px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
           >
-            <span className="text-[#977f5d] flex items-center gap-2 text-sm">
+            <span className="text-[#ffffff] flex items-center gap-2 text-sm">
               <LocationIcon />
               Cómo llegar
             </span>

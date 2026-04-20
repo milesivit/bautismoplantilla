@@ -6,15 +6,15 @@ export function Honeymoon() {
   return (
     <section className="py-20 text-center bg-white relative">
       <h2
-        className="text-4xl md:text-5xl mb-4 mt-6"
-        style={{ fontFamily: "'Great Vibes', cursive", color: "#D6C4AE" }}
+        className="text-4xl md:text-4xl mb-4 mt-6"
+        style={{ fontFamily: "'Montserrat', sans-serif", color: "#1b4568" }}
       >
-        Luna de Miel
+        LUNA DE MIEL
       </h2>
 
       <p
         className="text-sm text-gray-600 max-w-md mx-auto leading-relaxed"
-        style={{ fontFamily: "'Playfair Display', serif" }}
+        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
       >
         Nuestro mejor regalo es que <span className="font-semibold">estés con nosotros</span>
         <br />
@@ -26,15 +26,15 @@ export function Honeymoon() {
       {/* BOTÓN */}
       <button
         onClick={() => setOpen(true)}
-        className="mt-6 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#D6C4AE] bg-[#FAF7F2] text-[#977f5d] shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
-        style={{ fontFamily: "'Playfair Display', serif" }}
+        className="mt-6 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#1b4568] bg-[#1b4568] text-[#ffffff] shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
+        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
       >
         COLABORAR
       </button>
 
       {/* GIF */}
       <img
-        src="/honeymoon.gif"
+        src="/present.gif"
         className="mt-8 w-20 md:w-24 mx-auto opacity-80"
       />
 
@@ -45,7 +45,7 @@ export function Honeymoon() {
           onClick={() => setOpen(false)}
         >
           <div
-            className="bg-[#E8DCCB] rounded-2xl p-6 w-[90%] max-w-sm shadow-xl relative"
+            className="bg-[#ffffff] rounded-2xl p-6 w-[90%] max-w-sm shadow-xl relative"
             onClick={(e) => e.stopPropagation()}
           >
             {/* cerrar */}
@@ -57,8 +57,8 @@ export function Honeymoon() {
             </button>
 
             <h3
-              className="text-3xl mb-4"
-              style={{ fontFamily: "'Great Vibes', cursive", color: "#111111" }}
+              className="text-2xl mb-4"
+              style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#1b4568" }}
             >
               Ayúdanos a viajar por el mundo
             </h3>
@@ -74,7 +74,7 @@ export function Honeymoon() {
                 <span className="font-semibold">Titular:</span> XXXXXXX XXXXXXX
               </p>
             </div>
-          <img src="/honeymoon.png" className="mt-6 mb-4 w-16 mx-auto opacity-80" />
+          <img src="/honeymoon.gif" className="mt-6 mb-4 w-16 mx-auto opacity-80" />
           </div>
         </div>
       )}

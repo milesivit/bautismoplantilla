@@ -3,7 +3,7 @@ export function DressCode() {
     <section className="py-10 text-center bg-white">
       <img
         src="/tuxedo.gif"
-        className="mt-8 w-10 md:w-20 mx-auto opacity-80"
+        className="mt-8 w-20 sm:w-25 md:w-30 mx-auto opacity-80"
       />
 
       <h2

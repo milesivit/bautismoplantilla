@@ -3,10 +3,10 @@ export function Asistencia() {
     <section className="py-10 text-center bg-[#1b4568] ">
 
       <h2
-        className="text-4xl md:text-4xl mb-4 mt-6"
+        className="text-4xl md:text-3xl mb-4 mt-6"
         style={{ fontFamily: "'Montserrat', sans-serif", color: "#ffffff" }}
       >
-        Confirmá tu asistencia
+        CONFIRMÁ TU ASISTENCIA
       </h2>
 
       {/* linea */}
@@ -36,7 +36,7 @@ export function Asistencia() {
         target="_blank"
         rel="noopener noreferrer"
         className="mt-6 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#1b4568] bg-[#FAF7F2] text-[#1b4568] shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
-        style={{ fontFamily: "'Playfair Display', serif" }}
+        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
       >
         Confirmar asistencia
       </a>

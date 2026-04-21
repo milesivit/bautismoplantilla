@@ -1,13 +1,13 @@
 import Hero from "./components/Hero";
 import { Countdown } from "./components/Countdown";
-import { DressCode } from "./components/DressCode";
-import { Honeymoon } from "./components/Honeymoon";
 import { Itinerary } from "./components/Initerario";
-import { Information } from "./components/Menu";
 import { Asistencia } from "./components/Asistencia";
 import { Footer } from "./components/Footer";
 import { Frase } from "./components/frase";
 import { Instagram } from "./components/Instagram";
+import { FraseDos } from "./components/frase2";
+import { Gallery } from "./components/Gallery";
+import { FraseTres } from "./components/frase3";
 
 function App() {
   return (
@@ -15,11 +15,11 @@ function App() {
       <Hero />
       <Countdown />
       <Frase />
-      <DressCode />
-      <Instagram />
       <Itinerary />
-      <Information />
-      <Honeymoon />
+      <FraseDos />
+      <Gallery />
+      <FraseTres />
+      <Instagram />
       <Asistencia />
       <Footer />
     </>

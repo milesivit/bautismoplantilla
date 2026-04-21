@@ -37,9 +37,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-4xl mb-4 mt-6 tracking-[0.2em]"
-            style={{ fontFamily: "'Montserrat', sans-serif", color: "#1b4568" }}
+            style={{ fontFamily: "'Montserrat', sans-serif", color: "#3FA7D6" }}
           >
-            NATALIA & MATIAS
+            MAGDALENA
           </motion.h2>
 
           <motion.h6
@@ -47,9 +47,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl mb-6 max-w-xl mx-auto leading-relaxed"
-            style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#1b4568" }}
+            style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#5F9FBF" }}
           >
-            El amor nos trajo hasta acá y ahora queremos que seas parte de este momento inolvidable
+            Mi primer añito y bautismo
           </motion.h6>
 
           <motion.button
@@ -58,7 +58,7 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.5 }}
             onClick={startExperience}
             className="px-8 py-3 rounded-full text-lg shadow-md hover:scale-105 transition"
-            style={{ backgroundColor: "#1b4568", color: "white" }}
+            style={{ backgroundColor: "#3FA7D6", color: "white" }}
           >
             VER INVITACIÓN
           </motion.button>
@@ -71,21 +71,21 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center transition-all duration-700"
           style={{
-            backgroundImage: "url('/parejaa.jpeg')",
+            backgroundImage: "url('/cata.jpeg')",
             filter: started ? "blur(0px)" : "blur(8px)",
             transform: started ? "scale(1)" : "scale(1.05)",
           }}
         />
 
         {/* Overlay oscuro */}
-        <div
+        {/* <div
           className="absolute inset-0 transition-all duration-700"
           style={{
             backgroundColor: started
               ? "rgba(0,0,0,0.4)"
               : "rgba(0,0,0,0.7)",
           }}
-        />
+        /> */}
 
         {/* Música */}
         <audio ref={audioRef} src="/cancion.mp3" />

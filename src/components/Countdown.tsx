@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function Countdown() {
-  const weddingDate = new Date("2027-01-10T00:00:00");
+  const weddingDate = new Date("2026-07-10T00:00:00");
 
   const calculateTimeLeft = () => {
     const difference = +weddingDate - +new Date();
@@ -28,18 +28,21 @@ export function Countdown() {
     return () => clearInterval(timer);
   }, []);
 
+  const primaryColor = "#3FA7D6"; // celeste legible
+  const secondaryColor = "#5F9FBF"; // un poco más suave
+
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
       <span
         className="text-4xl md:text-6xl font-light tabular-nums"
-        style={{ color: "#1b4568" }}
+        style={{ color: primaryColor }}
       >
         {String(value).padStart(2, "0")}
       </span>
 
       <span
         className="text-xs md:text-sm tracking-[0.2em] mt-2"
-        style={{ color: "#1b4568" }}
+        style={{ color: secondaryColor }}
       >
         {label}
       </span>
@@ -51,13 +54,16 @@ export function Countdown() {
 
       <p
         className="mt-10 text-lg tracking-wide"
-        style={{ color: "#1b4568" }}
+        style={{ color: secondaryColor }}
       >
-        El <span className="text-red-600 font-medium">01 de Enero de 2027</span> en
+        El <span className="font-semibold" style={{ color: primaryColor }}>
+          10 de Julio de 2026
+        </span>{" "}
+        en
       </p>
 
       <img
-        src="/rings.gif"
+        src="/peace.gif"
         className="mt-8 w-20 md:w-24 mx-auto opacity-80"
       />
 
@@ -69,10 +75,10 @@ export function Countdown() {
       </div>
 
       <p
-        className="mt-10 text-lg tracking-wide"
-        style={{ color: "#1b4568" }}
+        className="mt-10 text-xl md:text-2xl tracking-[0.3em] font-medium"
+        style={{ color: primaryColor }}
       >
-        ¡NOS CASAMOS!
+        MAGDALENA
       </p>
     </section>
   );

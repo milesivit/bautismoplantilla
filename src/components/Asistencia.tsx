@@ -1,42 +1,33 @@
 export function Asistencia() {
   return (
-    <section className="py-10 text-center bg-[#1b4568] ">
+    <section className="py-14 text-center bg-[#3FA7D6] px-6">
 
+      {/* TÍTULO */}
       <h2
-        className="text-4xl md:text-3xl mb-4 mt-6"
+        className="text-2xl md:text-3xl mb-4 leading-snug"
         style={{ fontFamily: "'Montserrat', sans-serif", color: "#ffffff" }}
       >
-        CONFIRMÁ TU ASISTENCIA
+        ¿VENDRÁS A MI CUMPLEAÑOS Y BAUTISMO?
       </h2>
 
-      {/* linea */}
-      <div className="w-24 h-[1px] bg-white mx-auto mb-12" />
+      {/* TEXTO */}
+      <p
+        className="text-white/90 text-sm md:text-base mb-6"
+        style={{ fontFamily: "'Montserrat', sans-serif" }}
+      >
+        ¡Me haría muy feliz verte ese día! 🤍
+      </p>
 
-      <p
-        className="text-sm text-white max-w-md mx-auto leading-relaxed"
-        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
-      >
-        Por favor <span className="font-semibold">confirma tu asistencia</span> 
-        <br />
-        antes del <span className="font-semibold">primero de octubre</span>
-      </p>
-      <br />
-      <p
-        className="text-sm text-white max-w-md mx-auto leading-relaxed"
-        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
-      >
-        Si fuiste invitado/a con acompañante, 
-        <br />
-        <span className="text-red-400 font-semibold">completá un formulario por persona</span>.
-      </p>
+      {/* LÍNEA */}
+      <div className="w-16 h-[1px] bg-white/70 mx-auto mb-8" />
+
       {/* BOTÓN WHATSAPP */}
-      
       <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSc4KMg4oK9QS_tHfwd_fi_peOY1aQ2PAJL49JbBKLFHoDDevA/viewform"
+        href="https://wa.me/543463645091"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-flex items-center gap-2 px-6 py-2 rounded-full border border-[#1b4568] bg-[#FAF7F2] text-[#1b4568] shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
-        style={{ fontFamily: "'Roboto Flex', sans-serif" }}
+        className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-white text-[#3FA7D6] font-medium shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
+        style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         Confirmar asistencia
       </a>

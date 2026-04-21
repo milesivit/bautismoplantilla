@@ -36,7 +36,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-4xl mb-4 mt-6 tracking-[0.2em]"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-widest"
             style={{ fontFamily: "'Montserrat', sans-serif", color: "#3FA7D6" }}
           >
             MAGDALENA

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function Countdown() {
-  const weddingDate = new Date("2026-07-10T00:00:00");
+  const weddingDate = new Date("2026-07-19T00:00:00");
 
   const calculateTimeLeft = () => {
     const difference = +weddingDate - +new Date();
@@ -28,8 +28,8 @@ export function Countdown() {
     return () => clearInterval(timer);
   }, []);
 
-  const primaryColor = "#3FA7D6"; // celeste legible
-  const secondaryColor = "#5F9FBF"; // un poco más suave
+  const primaryColor = "#8B6B4A"; // celeste legible
+  const secondaryColor = "#C8A97E"; // un poco más suave
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
@@ -57,7 +57,7 @@ export function Countdown() {
         style={{ color: secondaryColor }}
       >
         El <span className="font-semibold" style={{ color: primaryColor }}>
-          10 de Julio de 2026
+          19 de Julio de 2026
         </span>{" "}
         en
       </p>

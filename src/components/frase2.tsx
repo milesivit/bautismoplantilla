@@ -1,6 +1,6 @@
 export function FraseDos() {
   return (
-    <section className="py-12 bg-[#3FA7D6] flex items-center justify-center">
+    <section className="py-12 bg-[#8B6B4A] flex items-center justify-center">
       <div className="flex flex-col items-center gap-4 w-full max-w-2xl px-6">
         
         {/* línea arriba */}

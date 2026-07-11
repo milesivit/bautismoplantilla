@@ -33,14 +33,14 @@ export function Itinerary() {
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4430.678683828601!2d-62.88533921953781!3d-33.56144854139987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cf2c79fbb58f17%3A0xa46b287f54974cfe!2sParroquia%20La%20Anunciaci%C3%B3n%20y%20Santo%20Cristo!5e0!3m2!1sen!2sar",
 
     celebracion:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207.7833506806591!2d-62.88836288637054!3d-33.565492028168656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cf2d9f5463cb83%3A0xf841c31a3818de53!2sEsos%20Locos%20Bajitos!5e0!3m2!1sen!2sar!4v1776742841937!5m2!1sen!2sar",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831.2002849567097!2d-62.8784478234138!3d-33.55854272283874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cf2c7af9f51c75%3A0x87c0fa75c1ab3d03!2sSociedad%20Rural!5e0!3m2!1sen!2sar!4v1783783151830!5m2!1sen!2sar",
   };
-
+  
   return (
     <section className="py-16 bg-white text-center px-6">
       <h2
         className="text-4xl mb-6"
-        style={{ fontFamily: "'Montserrat', sans-serif", color: "#3FA7D6" }}
+        style={{ fontFamily: "'Montserrat', sans-serif", color: "#8B6B4A" }}
       >
         ¿DÓNDE?
       </h2>
@@ -59,14 +59,16 @@ export function Itinerary() {
           <img src="/church.gif" className="mb-6 w-20 mx-auto opacity-80" />
 
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">
-            MISA
+              BAUTISMO 
+              <br />
+              (Parroquia la Anunciación y Santo Cristo)
           </p>
 
-          <p className="text-2xl text-gray-800">10:00 HS</p>
+          <p className="text-2xl text-gray-800">11:30 HS</p>
 
           <button
             onClick={() => setOpenMap("misa")}
-            className="mt-4 inline-flex items-center gap-2 bg-[#3FA7D6] px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
+            className="mt-4 inline-flex items-center gap-2 bg-[#C8A97E] px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
           >
             <span className="text-white flex items-center gap-2 text-sm">
               <LocationIcon />
@@ -86,13 +88,15 @@ export function Itinerary() {
 
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">
             CELEBRACIÓN
+            <br />
+            (Sociedad rural, salón Maurino)
           </p>
 
-          <p className="text-2xl text-gray-800">13:00 HS</p>
+          <p className="text-2xl text-gray-800">Al finalizar el bautismo</p>
 
           <button
             onClick={() => setOpenMap("celebracion")}
-            className="mt-4 inline-flex items-center gap-2 bg-[#3FA7D6] px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
+            className="mt-4 inline-flex items-center gap-2 bg-[#C8A97E] px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
           >
             <span className="text-white flex items-center gap-2 text-sm">
               <LocationIcon />

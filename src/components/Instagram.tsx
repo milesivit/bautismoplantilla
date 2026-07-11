@@ -18,12 +18,12 @@ export function Instagram() {
 
       <h2
         className="text-xl md:text-2xl mt-4 mb-3 px-4"
-        style={{ fontFamily: "'Montserrat', sans-serif", color: "#3FA7D6" }}
+        style={{ fontFamily: "'Montserrat', sans-serif", color: "#A68A64" }}
       >
         Subí tus momentos y etiquetalos
       </h2>
 
-      <div className="w-16 h-[2px] bg-[#3FA7D6] mx-auto mb-4 rounded-full" />
+      <div className="w-16 h-[2px] bg-[#A68A64] mx-auto mb-4 rounded-full" />
 
       <p
         className="text-base md:text-lg text-gray-600 max-w-sm mx-auto leading-relaxed px-4"

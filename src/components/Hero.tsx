@@ -37,7 +37,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-widest"
-            style={{ fontFamily: "'Montserrat', sans-serif", color: "#3FA7D6" }}
+            style={{ fontFamily: "'Montserrat', sans-serif", color: "#8B6B4A" }}
           >
             MAGDALENA
           </motion.h2>
@@ -47,7 +47,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl mb-6 max-w-xl mx-auto leading-relaxed"
-            style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#5F9FBF" }}
+            style={{ fontFamily: "'Roboto Flex', sans-serif", color: "#A68A64" }}
           >
             Mi primer añito y bautismo
           </motion.h6>
@@ -58,7 +58,7 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.5 }}
             onClick={startExperience}
             className="px-8 py-3 rounded-full text-lg shadow-md hover:scale-105 transition"
-            style={{ backgroundColor: "#3FA7D6", color: "white" }}
+            style={{ backgroundColor: "#C8A97E", color: "white" }}
           >
             VER INVITACIÓN
           </motion.button>
@@ -71,7 +71,7 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center transition-all duration-700"
           style={{
-            backgroundImage: "url('/cata.jpeg')",
+            backgroundImage: "url('/01.jpg')",
             filter: started ? "blur(0px)" : "blur(8px)",
             transform: started ? "scale(1)" : "scale(1.05)",
           }}

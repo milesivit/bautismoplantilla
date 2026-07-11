@@ -1,6 +1,6 @@
 export function Asistencia() {
   return (
-    <section className="py-14 text-center bg-[#3FA7D6] px-6">
+    <section className="py-14 text-center bg-[#8B6B4A] px-6">
 
       {/* TÍTULO */}
       <h2
@@ -23,10 +23,10 @@ export function Asistencia() {
 
       {/* BOTÓN WHATSAPP */}
       <a
-        href="https://wa.me/543463645091"
+        href="https://wa.me/543463404686"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-white text-[#3FA7D6] font-medium shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
+        className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-white text-[#8B6B4A] font-medium shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300"
         style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         Confirmar asistencia

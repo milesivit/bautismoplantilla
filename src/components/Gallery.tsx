@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function Gallery() {
-  const images = ["/02.jpg", "/018.jpg", "/03.jpg", "/04.jpg", "/05.jpg", "/06.jpg", "/07.jpg", "/08.jpg",
-    "/09.jpg", "/010.jpg", "/011.jpg", "/012.jpg", "/013.jpg", "/014.jpg", "/015.jpg", "/016.jpg",
+  const images = ["/02.jpg", "/018.jpg", "/03.jpg", "/04.jpg", "/05.jpg",  "/016.jpg",
     "/017.jpg", "/019.jpg"
   ];
   const [index, setIndex] = useState(0);

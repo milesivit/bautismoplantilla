@@ -61,7 +61,7 @@ export function Itinerary() {
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">
               BAUTISMO 
               <br />
-              (Parroquia la Anunciación y Santo Cristo)
+              Parroquia la Anunciación y Santo Cristo
           </p>
 
           <p className="text-2xl text-gray-800">11:30 HS</p>
@@ -89,7 +89,7 @@ export function Itinerary() {
           <p className="text-xs tracking-[0.3em] text-gray-500 mb-2">
             CELEBRACIÓN
             <br />
-            (Sociedad rural, salón Maurino)
+            Sociedad rural, salón Maurino
           </p>
 
           <p className="text-2xl text-gray-800">Al finalizar el bautismo</p>
